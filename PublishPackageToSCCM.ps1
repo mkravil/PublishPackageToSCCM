@@ -54,7 +54,7 @@ $Label4.location                 = New-Object System.Drawing.Point(20,110)
 $Label4.Font                     = 'Microsoft Sans Serif,10'
 
 $Groupbox1                       = New-Object system.Windows.Forms.Groupbox
-$Groupbox1.height                = 50
+$Groupbox1.height                = 45
 $Groupbox1.width                 = 360
 $Groupbox1.text                  = "Deployment Type"
 $Groupbox1.location              = New-Object System.Drawing.Point(20,140)
@@ -115,29 +115,6 @@ $rbBAT.height                    = 20
 $rbBAT.location                  = New-Object System.Drawing.Point(180,20)
 $rbBAT.Font                      = 'Microsoft Sans Serif,10'
 
-$gbMSI                           = New-Object system.Windows.Forms.Groupbox
-$gbMSI.height                    = 50
-$gbMSI.width                     = 360
-$gbMSI.Anchor                    = 'top,right,left'
-$gbMSI.text                      = "MSI"
-$gbMSI.location                  = New-Object System.Drawing.Point(20,200)
-
-$Label5                          = New-Object system.Windows.Forms.Label
-$Label5.text                     = "MSI Name"
-$Label5.AutoSize                 = $true
-$Label5.width                    = 25
-$Label5.height                   = 10
-$Label5.location                 = New-Object System.Drawing.Point(10,20)
-$Label5.Font                     = 'Microsoft Sans Serif,10'
-
-$tbMSIName                       = New-Object system.Windows.Forms.TextBox
-$tbMSIName.multiline             = $false
-$tbMSIName.width                 = 210
-$tbMSIName.height                = 20
-$tbMSIName.Anchor                = 'top,right,left'
-$tbMSIName.location              = New-Object System.Drawing.Point(130,15)
-$tbMSIName.Font                  = 'Microsoft Sans Serif,10'
-
 $gbActions                       = New-Object system.Windows.Forms.Groupbox
 $gbActions.height                = 370
 $gbActions.width                 = 370
@@ -181,7 +158,7 @@ $btnStart                        = New-Object system.Windows.Forms.Button
 $btnStart.text                   = "Start Executing Actions"
 $btnStart.width                  = 180
 $btnStart.height                 = 30
-$btnStart.location               = New-Object System.Drawing.Point(20,350)
+$btnStart.location               = New-Object System.Drawing.Point(128,309)
 $btnStart.Font                   = 'Microsoft Sans Serif,10'
 
 $errPackageName                  = New-Object system.Windows.Forms.Label
@@ -227,16 +204,6 @@ $errVersion.Anchor               = 'top,right'
 $errVersion.location             = New-Object System.Drawing.Point(390,105)
 $errVersion.Font                 = 'Microsoft Sans Serif,10'
 $errVersion.ForeColor            = "#ff0000"
-
-$errMSIName                      = New-Object system.Windows.Forms.Label
-$errMSIName.text                 = "*"
-$errMSIName.AutoSize             = $true
-$errMSIName.visible              = $false
-$errMSIName.width                = 25
-$errMSIName.height               = 10
-$errMSIName.location             = New-Object System.Drawing.Point(345,15)
-$errMSIName.Font                 = 'Microsoft Sans Serif,10'
-$errMSIName.ForeColor            = "#ff0000"
 
 $cbDeployToDeviceCollectionsHiddenRequired   = New-Object system.Windows.Forms.CheckBox
 $cbDeployToDeviceCollectionsHiddenRequired.text  = "Deploy To Device Collections (Required, Hidden)"
@@ -331,7 +298,7 @@ $Label6.text                     = "Test Machines (;)"
 $Label6.AutoSize                 = $true
 $Label6.width                    = 25
 $Label6.height                   = 10
-$Label6.location                 = New-Object System.Drawing.Point(20,260)
+$Label6.location                 = New-Object System.Drawing.Point(20,200)
 $Label6.Font                     = 'Microsoft Sans Serif,10'
 
 $tbTestMachine                   = New-Object system.Windows.Forms.TextBox
@@ -339,7 +306,7 @@ $tbTestMachine.multiline         = $false
 $tbTestMachine.width             = 230
 $tbTestMachine.height            = 20
 $tbTestMachine.Anchor            = 'top,right,left'
-$tbTestMachine.location          = New-Object System.Drawing.Point(150,255)
+$tbTestMachine.location          = New-Object System.Drawing.Point(150,195)
 $tbTestMachine.Font              = 'Microsoft Sans Serif,10'
 
 $Label7                          = New-Object system.Windows.Forms.Label
@@ -347,7 +314,7 @@ $Label7.text                     = "Test Users (;)"
 $Label7.AutoSize                 = $true
 $Label7.width                    = 25
 $Label7.height                   = 10
-$Label7.location                 = New-Object System.Drawing.Point(21,285)
+$Label7.location                 = New-Object System.Drawing.Point(20,230)
 $Label7.Font                     = 'Microsoft Sans Serif,10'
 
 $tbTestUser                      = New-Object system.Windows.Forms.TextBox
@@ -355,7 +322,7 @@ $tbTestUser.multiline            = $false
 $tbTestUser.width                = 230
 $tbTestUser.height               = 20
 $tbTestUser.Anchor               = 'top,right,left'
-$tbTestUser.location             = New-Object System.Drawing.Point(150,280)
+$tbTestUser.location             = New-Object System.Drawing.Point(150,225)
 $tbTestUser.Font                 = 'Microsoft Sans Serif,10'
 
 $lbLog                           = New-Object system.Windows.Forms.ListBox
@@ -448,11 +415,10 @@ $btnRemoveApplication.Font       = 'Microsoft Sans Serif,10'
 
 $tbUnikeyRef                     = New-Object system.Windows.Forms.TextBox
 $tbUnikeyRef.multiline           = $false
-$tbUnikeyRef.text                = "PFA-"
 $tbUnikeyRef.width               = 230
 $tbUnikeyRef.height              = 20
 $tbUnikeyRef.Anchor              = 'top,right,left'
-$tbUnikeyRef.location            = New-Object System.Drawing.Point(150,305)
+$tbUnikeyRef.location            = New-Object System.Drawing.Point(150,255)
 $tbUnikeyRef.Font                = 'Microsoft Sans Serif,10'
 
 $lblUnikeyRef                    = New-Object system.Windows.Forms.Label
@@ -460,12 +426,11 @@ $lblUnikeyRef.text               = "Unikey Ref"
 $lblUnikeyRef.AutoSize           = $true
 $lblUnikeyRef.width              = 25
 $lblUnikeyRef.height             = 10
-$lblUnikeyRef.location           = New-Object System.Drawing.Point(20,310)
+$lblUnikeyRef.location           = New-Object System.Drawing.Point(20,260)
 $lblUnikeyRef.Font               = 'Microsoft Sans Serif,10'
 
-$Form.controls.AddRange(@($Label1,$Label2,$Label3,$Label4,$Groupbox1,$tbPackageName,$tbPublisher,$tbApplicationName,$tbVersion,$gbMSI,$gbActions,$btnStart,$errPackageName,$errPublisher,$errApplicationName,$errVersion,$Label6,$tbTestMachine,$Label7,$tbTestUser,$lbLog,$ddApplications,$btnRefreshApplications,$btnLoadApplication,$ddApplicationFolders,$btnRefreshApplicationFolders,$btnRemoveApplication,$tbUnikeyRef,$lblUnikeyRef))
+$Form.controls.AddRange(@($Label1,$Label2,$Label3,$Label4,$Groupbox1,$tbPackageName,$tbPublisher,$tbApplicationName,$tbVersion,$gbActions,$btnStart,$errPackageName,$errPublisher,$errApplicationName,$errVersion,$Label6,$tbTestMachine,$Label7,$tbTestUser,$lbLog,$ddApplications,$btnRefreshApplications,$btnLoadApplication,$ddApplicationFolders,$btnRefreshApplicationFolders,$btnRemoveApplication,$tbUnikeyRef,$lblUnikeyRef))
 $Groupbox1.controls.AddRange(@($rbMSI,$rbPSAppDeploy,$rbBAT))
-$gbMSI.controls.AddRange(@($Label5,$tbMSIName,$errMSIName))
 $gbActions.controls.AddRange(@($cbCreatePackage,$cbCreateDeploymentType,$cbCreateDeviceCollections,$cbCreateUserCollection,$cbDeployToDeviceCollectionsHiddenRequired,$cbDeployToUserCollectionAvailable,$cbRemoveDeploymentsAbove,$cbCreateADGroups,$cbCreateUserADGroup,$cbAddADGroupsQueriesToDeviceCollections,$cbAddADGroupQueryToUserCollection,$cbAddTestMachineToDeviceCollection,$cbRemoveTestMachineFromDeviceCollection,$cbAddTestUserToUserCollection,$cbRemoveTestUserFromUserCollection,$cbDistributeContent,$cbUpdateContent,$ddPresets))
 
 $btnStart.Add_Click({ btnStartClicked })
@@ -517,7 +482,6 @@ $tbPackageName.text = ""
 $tbPublisher.text = ""
 $tbApplicationName.text = ""
 $tbVersion.text = ""
-$tbMSIName.text = ""
 
 $LogFileLocation = "$($env:TEMP)\1111.log"
 }
@@ -680,6 +644,19 @@ function CheckApplicationExists($appname){
     return $retval
 }
 
+function GetMSIFileName($path){
+    $retval = ""
+    try{
+        cd C:\
+        $retval = (dir $path *.msi)[0].Name
+        Set-Location "$($SiteCode):\" -ErrorAction Stop
+    }
+    catch{
+        wl($_.Exception.Message)
+        $retval = ""
+    }
+    return $retval
+}
 
 
 
@@ -820,33 +797,6 @@ function ValidateForm{
         $errVersion.visible = $true
         $retValidateForm += wl("Version is empty;")
     }
-    $cbCreatePackage.checked = $true
-    $cbCreateDeploymentType.checked = $true
-    $cbDistributeContent.checked = $true
-    $cbCreateDeviceCollections.checked = $true
-    $cbCreateUserCollection.checked = $false
-    $cbDeployToDeviceCollectionsHiddenRequired.checked = $true
-    $cbDeployToUserCollectionAvailable.checked = $false
-    $cbRemoveDeploymentsAbove.checked = $false
-    $cbCreateADGroups.checked = $false
-    $cbCreateUserADGroup.checked = $false
-    $cbAddADGroupsQueriesToDeviceCollections.checked = $false
-    $cbAddADGroupQueryToUserCollection.checked = $false
-    $cbAddTestMachineToDeviceCollection.checked = $true
-    $cbRemoveTestMachineFromDeviceCollection.checked = $false
-    $cbAddTestUserToUserCollection.checked = $false
-    $cbRemoveTestUserFromUserCollection.checked = $false
-    $cbUpdateContent.checked = $false
-    if($tbMSIName.text -eq "" -And $rbMSI.checked -And $cbCreateDeploymentType.checked -And ($cbCreatePackage.checked -Or $cbCreateDeploymentType.checked -Or $cbDistributeContent.checked)){
-        $errMSIName.visible = $true
-        $retValidateForm += wl("MSIName is empty;")
-    }
-    $MSIName = RemoveDotMSIAtTheEnd($tbMSIName.text)
-    if(![System.IO.File]::Exists("$defaultPackageLocation\$($MSIName).msi") -And $rbMSI.checked){
-        $errMSIName.visible = $true
-        $retValidateForm += wl("MSI doesn't exist $defaultPackageLocation\$($MSIName).msi")
-    }
-    
     return $retValidateForm
 }
 
@@ -934,7 +884,7 @@ function btnStartClicked {
     $Publisher = $tbPublisher.text
     $ApplicationName = $tbApplicationName.text
     $Version = $tbVersion.text
-    $MSIName = RemoveDotMSIAtTheEnd($tbMSIName.text)
+    $MSIName = ""
     $testmachine = $($tbTestMachine.text).Split(";")
     $testuser = $($tbTestUser.text).Split(";")
     
@@ -978,26 +928,32 @@ function btnStartClicked {
     #Create Deployment Type
     if($cbCreateDeploymentType.checked -And $returnerror -eq ""){
         if($rbMSI.checked){
-            wl("Create Deployment Type: getting ProductCode property for $defaultPackageLocation\$($MSIName).msi")
-            $tmp = GetProductCode("$defaultPackageLocation\$($MSIName).msi")
-            $ProductCode = ($tmp|Out-String).Trim()
-            if($ProductCode -like "*error*"){
-                $returnerror += $ProductCode
+            $MSIName = GetMSIFileName($defaultPackageLocation)
+            if($MSIName -eq ""){
+                $returnerror += ShowMessageBoxWithError("No MSI files were found in $defaultPackageLocation folder")
             }else{
-                wl("Create Deployment Type: ProductCode=$ProductCode")
-                $guidProductCode = [GUID]$ProductCode
-            	$InstallCommand = "msiexec.exe /i $($MSIName).msi"
-            	If([System.IO.File]::Exists("$defaultPackageLocation\$($PackageName).mst")){$InstallCommand += " TRANSFORMS=$($PackageName).mst"}
-            	$InstallCommand += " /qn /l* C:\Windows\Logs\$($PackageName)_I.log"
-            	wl("Create Deployment Type: InstallCommand=$InstallCommand")
-            	$UninstallCommand = "msiexec.exe /x $ProductCode /qn /l* C:\Windows\Logs\$($PackageName)_U.log"
-            	wl("Create Deployment Type: UninstallCommand=$UninstallCommand")
-            	wl("Create Deployment Type: Add-CMMsiDeploymentType -DeploymentTypeName `"$PackageName`" -InstallCommand `"$InstallCommand`" -ApplicationName `"$PackageName`" -ProductCode $ProductCode -ContentLocation `"$defaultPackageLocation`" -LogonRequirementType WhetherOrNotUserLoggedOn -UninstallCommand `"$UninstallCommand`" -UserInteractionMode Hidden -InstallationBehaviorType InstallForSystem -Comment `"$description`" -Force")
-                try{
-                	Add-CMMsiDeploymentType -DeploymentTypeName "$PackageName" -InstallCommand "$InstallCommand" -ApplicationName "$PackageName" -ProductCode $ProductCode -ContentLocation "$defaultPackageLocation\$($MSIName).msi" -LogonRequirementType WhetherOrNotUserLoggedOn -UninstallCommand "$UninstallCommand" -UserInteractionMode Hidden -InstallationBehaviorType InstallForSystem -Comment "$description" -Force
-                	wl("Create Deployment Type: created MSI deployment type")
-                }catch{
-                	$returnerror += ShowMessageBoxWithError("Error: "+ $_.Exception.Message)
+                wl("Create Deployment Type: found msi file $MSIName")
+                wl("Create Deployment Type: getting ProductCode property for $defaultPackageLocation\$($MSIName)")
+                $tmp = GetProductCode("$defaultPackageLocation\$($MSIName)")
+                $ProductCode = ($tmp|Out-String).Trim()
+                if($ProductCode -like "*error*"){
+                    $returnerror += $ProductCode
+                }else{
+                    wl("Create Deployment Type: ProductCode=$ProductCode")
+                    $guidProductCode = [GUID]$ProductCode
+                	$InstallCommand = "msiexec.exe /i ""$($MSIName)"""
+                	If([System.IO.File]::Exists("$defaultPackageLocation\$($PackageName).mst")){$InstallCommand += " TRANSFORMS=$($PackageName).mst"}
+                	$InstallCommand += " /qn /l* C:\Windows\Logs\$($PackageName)_I.log"
+                	wl("Create Deployment Type: InstallCommand=$InstallCommand")
+                	$UninstallCommand = "msiexec.exe /x $ProductCode /qn /l* C:\Windows\Logs\$($PackageName)_U.log"
+                	wl("Create Deployment Type: UninstallCommand=$UninstallCommand")
+                	wl("Create Deployment Type: Add-CMMsiDeploymentType -DeploymentTypeName `"$PackageName`" -InstallCommand `"$InstallCommand`" -ApplicationName `"$PackageName`" -ProductCode $ProductCode -ContentLocation `"$defaultPackageLocation`" -LogonRequirementType WhetherOrNotUserLoggedOn -UninstallCommand `"$UninstallCommand`" -UserInteractionMode Hidden -InstallationBehaviorType InstallForSystem -Comment `"$description`" -Force")
+                    try{
+                    	Add-CMMsiDeploymentType -DeploymentTypeName "$PackageName" -InstallCommand "$InstallCommand" -ApplicationName "$PackageName" -ProductCode $ProductCode -ContentLocation "$defaultPackageLocation\$($MSIName)" -LogonRequirementType WhetherOrNotUserLoggedOn -UninstallCommand "$UninstallCommand" -UserInteractionMode Hidden -InstallationBehaviorType InstallForSystem -Comment "$description" -Force
+                    	wl("Create Deployment Type: created MSI deployment type")
+                    }catch{
+                    	$returnerror += ShowMessageBoxWithError("Error: "+ $_.Exception.Message)
+                    }
                 }
             }
         }

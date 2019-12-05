@@ -1247,9 +1247,9 @@ function btnStartClicked {
     
     $actionname = "Create Package"
     if($cbCreatePackage.checked -And $returnerror -eq ""){
-        wl("$actionname : New-CMApplication -Name ""$PackageName"" -Description ""$description"" -Publisher ""$Publisher"" -SoftwareVersion ""$Version"" -LocalizedName ""$PackageName"" -LocalizedDescription ""$PackageName"" -OptionalReference ""$($tbUnikeyRef.text)""")
+        wl("$actionname : New-CMApplication -Name ""$PackageName"" -Description ""$description"" -Publisher ""$Publisher"" -SoftwareVersion ""$Version"" -LocalizedName ""$PackageName"" -LocalizedDescription ""$PackageName"" -OptionalReference ""$($tbUnikeyRef.text)"" -AutoInstall $true")
         try{
-			New-CMApplication -Name "$PackageName" -Description "$description" -Publisher "$Publisher" -SoftwareVersion "$Version" -LocalizedName "$PackageName" -LocalizedDescription "$PackageName" -OptionalReference "$($tbUnikeyRef.text)" -ErrorAction Stop
+			New-CMApplication -Name "$PackageName" -Description "$description" -Publisher "$Publisher" -SoftwareVersion "$Version" -LocalizedName "$PackageName" -LocalizedDescription "$PackageName" -OptionalReference "$($tbUnikeyRef.text)" -AutoInstall $true -ErrorAction Stop
 			wl("$actionname : created application $PackageName")
 		}
 		catch{
